@@ -1,0 +1,29 @@
+<template name="home">
+  <header>
+    <h1>Hola {{ username }}</h1>
+  </header>
+
+  <aside>
+  {{> messages }}
+  {{> input }}
+  </aside>
+
+</template>
+
+
+
+<template name="welcome">
+  <p>
+    Let's chat.
+  </p>
+</template>
+
+<template name="messages">
+  {{#each messages}}
+    <strong>{{name}}:</strong> {{message}}<br>
+  {{/each}}
+</template>
+
+<template name="input">
+  <p>Message: <input type="text" id="message"></p>
+</template>
