@@ -4,19 +4,35 @@ html {
 }
 
 #chat {
-	width: 100%;
 	margin: 0 auto;
 }
+
 
 #input textarea {
 	height: 60px;
 	overflow-y: hidden;
 	resize: none;
-	width: 80%;
+	width: 79%;
 	float: left;
 }
+#input {
+	width: 100%;
+}
 #input button {
+	background-color: #4CAF50; /* Green */
+	float: left;
 	height: 65px;
 	width: 19%;
-	float: left;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+#input button:hover {
+	background-color: #218A25;
+}
+#input button:active {
+	background-color: #7BCA7E;
 }

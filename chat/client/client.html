@@ -21,7 +21,7 @@
     {{#each messages}}
       {{#if equals username name }}
       <p style="text-align: right;">
-        <strong style="color: red;">{{name}}:</strong>
+        <strong style="color: #c83542;">{{name}}:</strong>
          {{message}}
       </p>
       {{else}}
@@ -33,7 +33,7 @@
 
 <template name="input">
   <div id="input">
-    <textarea id="message" maxlength="" autocorrect="off" autocomplete="off" spellcheck="true"></textarea>
+    <textarea id="message" maxlength="" autocorrect="off" autocomplete="off" spellcheck="true" placeholder="Escribe tu mensaje"></textarea>
     <button id="enviar">Enviar</button>
   </div>
 </template>
