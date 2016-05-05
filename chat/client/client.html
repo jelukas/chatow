@@ -1,12 +1,10 @@
 <template name="home">
-  <header>
-    <h1>Hola {{ username }}</h1>
-  </header>
 
-  <aside>
-  {{> messages }}
-  {{> input }}
-  </aside>
+
+  <main id="chat">
+    {{> messages }}
+    {{> input }}
+  </main>
 
 </template>
 
@@ -14,16 +12,28 @@
 
 <template name="welcome">
   <p>
-    Let's chat.
+    Chat
   </p>
 </template>
 
 <template name="messages">
-  {{#each messages}}
-    <strong>{{name}}:</strong> {{message}}<br>
-  {{/each}}
+  <div id="mensajes">
+    {{#each messages}}
+      {{#if equals username name }}
+      <p style="text-align: right;">
+        <strong style="color: red;">{{name}}:</strong>
+         {{message}}
+      </p>
+      {{else}}
+      <p><strong>{{name}}:</strong> {{message}}</p>
+      {{/if}}
+    {{/each}}
+  </div>
 </template>
 
 <template name="input">
-  <p>Message: <input type="text" id="message"></p>
+  <div id="input">
+    <textarea id="message" maxlength="" autocorrect="off" autocomplete="off" spellcheck="true"></textarea>
+    <button id="enviar">Enviar</button>
+  </div>
 </template>

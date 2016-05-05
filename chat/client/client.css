@@ -3,6 +3,20 @@ html {
     font-family: Verdana, sans-serif;
 }
 
-.login-buttons-dropdown-align-right {
-    float: right;
+#chat {
+	width: 100%;
+	margin: 0 auto;
+}
+
+#input textarea {
+	height: 60px;
+	overflow-y: hidden;
+	resize: none;
+	width: 80%;
+	float: left;
+}
+#input button {
+	height: 65px;
+	width: 19%;
+	float: left;
 }
