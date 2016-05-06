@@ -12,6 +12,19 @@ Router.route('/', function () {
 * Templates
 */
 if (Meteor.isClient) {
+
+    WebFontConfig = {
+      google: { families: [ 'Lato:400,100,300,700,900:latin' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+
     Template.messages.helpers({
         messages: function() {
             return Messages.find({}, { sort: { time: -1}, limit: 10}).fetch().reverse();
